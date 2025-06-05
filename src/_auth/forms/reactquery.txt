@@ -1,0 +1,14 @@
+this is without using react query where we have to handle the useState for isLoading , error seperately 
+by using react query
+use mutation is a hook that 
+1) exposes the mutate function you call when you want to run underlying async function createUserAccount function
+2) Tracks loading, error, and success status for you.
+3) Gives you hooks like isLoading, isError, data, and callback options 
+
+how caching matters
+React Query fetches posts from the server (fetchPosts).It saves them in the cache. The UI displays them immediately. If the user stays on this screen — React Query won't hit the server again every second. ⚡ Fast and efficient.
+
+A new post is added on the server. React Query is told: “Hey, that cached "posts" is now outdated.” It marks the cached data as stale.
+On the next render, or refocus, or interaction — React Query will refetch and update the cache.
+
+Pagination means breaking up a large set of data into smaller chunks or “pages”, so that you load and display it piece by piece, not all at once.
